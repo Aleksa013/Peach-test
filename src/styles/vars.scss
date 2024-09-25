@@ -1,0 +1,27 @@
+:root {
+  --white: #fff;
+  --red: #d43152;
+  --bordo: #b01736;
+  --grey-dark: #444444;
+}
+
+@font-face {
+  font-family: "Proxima_300";
+  src: url("./../assets/fonts/proximanovacond_regular.ttf");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Proxima_600";
+  src: url("./../assets/fonts/proximanovacond_bold.ttf");
+  font-weight: 600;
+}
+
+html,
+body {
+  height: 100%;
+  font-family: "Proxima_300", "Roboto", sans-serif;
+}
+body {
+  margin: 0;
+}
