@@ -13,6 +13,7 @@
   "rules": {
     "@typescript-eslint/no-var-requires": 0,
     "no-unused-expressions": "off",
-    "@typescript-eslint/no-unused-expressions": "warn"
+    "@typescript-eslint/no-unused-expressions": "warn",
+    "quotes": ["error", "double"]
   }
 }

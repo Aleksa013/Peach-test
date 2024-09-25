@@ -57,11 +57,11 @@ const module = {
     },
     {
       test: /\.(?:ico|gif|png|jpg|jpeg|svg)$/i,
-      type: "asset/resource",
+      type: "assets/resource",
     },
     {
       test: /\.(woff(2)?|eot|ttf|otf)$/i,
-      type: "asset/resource",
+      type: "assets/fonts",
     },
   ],
 };

@@ -1,0 +1,26 @@
+@import "./vars.scss";
+
+.header {
+  width: 88.7%;
+  padding: 2.1% 5.8%;
+  display: flex;
+  justify-content: space-between;
+
+  &__logo {
+    height: 25px;
+  }
+  &__menu {
+    margin: 0;
+    width: 62%;
+    display: flex;
+    gap: 2.21%;
+
+    &__item {
+      margin-top: 0.4%;
+      list-style-type: none;
+      color: var(--grey-dark);
+      font-family: "Proxima_600";
+      line-height: 20px;
+    }
+  }
+}
