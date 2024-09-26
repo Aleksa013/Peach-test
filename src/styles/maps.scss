@@ -1,0 +1,14 @@
+@import "./vars.scss";
+
+.maps {
+  width: 100%;
+  &__header {
+    &__button {
+      &:hover {
+        cursor: pointer;
+        color: $burgundy-color;
+        border-bottom: 3px solid $burgundy-color;
+      }
+    }
+  }
+}
