@@ -15,7 +15,7 @@ const entry = pages.reduce((config, page) => {
 const output = {
   path: _resolve(__dirname, "dist"),
   filename: "[name].js",
-  assetModuleFilename: "assets/[name][ext]",
+  assetModuleFilename: "./assets/[name][ext]",
 };
 
 const mode = "development";
@@ -57,11 +57,11 @@ const module = {
     },
     {
       test: /\.(?:ico|gif|png|jpg|jpeg|svg)$/i,
-      type: "assets/resource",
+      type: "asset/resource",
     },
     {
       test: /\.(woff(2)?|eot|ttf|otf)$/i,
-      type: "assets/fonts",
+      type: "asset/inline",
     },
   ],
 };

@@ -1,5 +1,6 @@
 import "./styles/vars.scss";
 import { getHeader } from "./components/getHeader.js";
+import { getBanner } from "./components/getBanner.js";
 
 const body = document.querySelector("body");
 
@@ -8,3 +9,4 @@ container.className = "container";
 body.appendChild(container);
 
 getHeader(container);
+getBanner(container);

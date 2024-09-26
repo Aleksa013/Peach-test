@@ -1,4 +1,5 @@
 import "./../styles/header.scss";
+import logoImage from "./../assets/logo.png";
 import { menuItems } from "../constansts/constants.js";
 
 export const getHeader = (parent) => {
@@ -8,7 +9,7 @@ export const getHeader = (parent) => {
 
   header.className = "header";
   logo.className = "header__logo";
-  logo.src = "./assets/logo.png";
+  logo.src = logoImage;
   menu.classList.add("header__menu", "fs18");
 
   menuItems.forEach((item) => {

@@ -1,26 +1,24 @@
-:root {
-  --white: #fff;
-  --red: #d43152;
-  --bordo: #b01736;
-  --grey-dark: #444444;
-}
+$white-color: #fff;
+$red-color: #d43152;
+$bordo-color: #b01736;
+$grey-dark-color: #444444;
 
 @font-face {
-  font-family: "Proxima_300";
-  src: url("./../assets/fonts/proximanovacond_regular.ttf");
+  font-family: "Proxima_400";
+  src: url("./../assets/fonts/proxima_regular.otf");
   font-weight: 400;
 }
 
 @font-face {
   font-family: "Proxima_600";
-  src: url("./../assets/fonts/proximanovacond_bold.ttf");
+  src: url("./../assets/fonts/proxima_bold.otf");
   font-weight: 600;
 }
 
 html,
 body {
   height: 100%;
-  font-family: "Proxima_300", "Roboto", sans-serif;
+  font-family: "Proxima_400", "Roboto", sans-serif;
 }
 body {
   margin: 0;
