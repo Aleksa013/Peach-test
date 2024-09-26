@@ -10,3 +10,16 @@ export const bannerContent = {
   buttonText: "На сайт",
   buttonLinkText: "https://softline.ru",
 };
+
+export const aboutContent = {
+  text: " – ведущий поставщик IT-решений и сервисов.* Мы предлагаем комплексные IT-решения, облака, программное и аппаратное&nbsp;обеспечение,&nbsp;решения&nbsp;по&nbsp;цифровой&nbsp;трансформации и кибербезопасности, а также широкий спектр IT-услуг.",
+  companyName: "Softline",
+};
+
+export const numberContent = {
+  years: ["> 30 лет", "на IT-рынке"],
+  employers: ["4600", "сотрудников в России"],
+  cities: ["25", "городов России"],
+  developers: ["2000+", "разработчиков"],
+  education: ["3000+", "сотрудников ежегодно проходят оценку и обучение"],
+};

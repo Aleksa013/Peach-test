@@ -1,7 +1,7 @@
-$bg-color: #fdfcfc;
+$bg-color: #f6f6f6;
 $white-color: #fff;
 $red-color: #d43152;
-$bordo-color: #b01736;
+$burgundy-color: #b01736;
 $grey-color: #d9d9d9;
 $grey-dark-color: #444444;
 
@@ -31,6 +31,7 @@ body {
   display: flex;
   flex-direction: column;
   margin: 0 auto;
+  background-color: $bg-color;
 }
 
 .fs18 {
@@ -47,4 +48,12 @@ body {
 
 .fs80 {
   font-size: 80px;
+}
+
+.burgundy {
+  color: $burgundy-color;
+}
+
+.grey-dark {
+  color: $grey-dark-color;
 }
