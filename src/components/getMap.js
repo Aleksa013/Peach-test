@@ -9,7 +9,7 @@ import allMap from "./../assets/imgs/map_all.png";
 export const getMap = (parent) => {
   const maps = document.createElement("div");
   const header = document.createElement("div");
-  const map = document.createElement("img");
+  const map = document.createElement("div");
   const officeButton = document.createElement("button");
   const mapsButtons = document.createElement("div");
 
@@ -19,7 +19,7 @@ export const getMap = (parent) => {
   header.className = "maps__header";
   mapsButtons.className = "maps__header__regions";
   officeButton.classList.add("maps__header__offices", "fs24");
-  map.src = allMap;
+  map.style.backgroundImage = `url(${allMap})`;
   officeButton.textContent = "Офисы Softline";
 
   mapsContent.buttons.forEach((button) => {

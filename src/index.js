@@ -4,6 +4,7 @@ import { getBanner } from "./components/getBanner.js";
 import { getAbout } from "./components/getAboutBlock.js";
 import { getNumbers } from "./components/getNumbersBlock.js";
 import { getMap } from "./components/getMap.js";
+import { getMission } from "./components/getMission.js";
 
 const body = document.querySelector("body");
 
@@ -16,3 +17,4 @@ getBanner(container);
 getAbout(container);
 getNumbers(container);
 getMap(container);
+getMission(container);

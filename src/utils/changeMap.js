@@ -9,43 +9,42 @@ import siberiaMap from "./../assets/imgs/map_siberia.png";
 import vestMap from "./../assets/imgs/map_vest.png";
 
 export const changeMap = (parent, newMap) => {
-  console.log("push");
   const oldMap = document.querySelector(".maps__body");
   if (oldMap) {
     oldMap.remove();
-    const currentMap = document.createElement("img");
+    const currentMap = document.createElement("div");
     currentMap.classList.add("maps__body");
-    let path = "";
+    let path = `url(${allMap})`;
     switch (newMap) {
       case "Центр":
-        path = centralMap;
+        path = `url(${centralMap})`;
         break;
       case "Москва":
-        path = moscowMap;
+        path = `url(${moscowMap})`;
         break;
       case "Северо-Запад":
-        path = nordOstMap;
+        path = `url(${nordOstMap})`;
         break;
       case "Юг":
-        path = southMap;
+        path = `url(${southMap})`;
         break;
       case "Волга":
-        path = volgaMap;
+        path = `url(${volgaMap})`;
         break;
       case "Сибирь":
-        path = siberiaMap;
+        path = `url(${siberiaMap})`;
         break;
       case "Дальний восток":
-        path = vestMap;
+        path = `url(${vestMap})`;
         break;
       case "Урал":
-        path = uralMap;
+        path = `url(${uralMap})`;
         break;
       default:
-        path = allMap;
+        path = `url(${allMap})`;
         break;
     }
-    currentMap.src = path;
+    currentMap.style.backgroundImage = path;
     parent.append(currentMap);
   }
 };
