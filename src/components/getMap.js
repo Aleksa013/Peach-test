@@ -17,11 +17,13 @@ export const getMap = (parent) => {
   maps.className = "maps";
   map.className = "maps__body";
   header.className = "maps__header";
+  mapsButtons.className = "maps__header__regions";
+  officeButton.classList.add("maps__header__offices", "fs24");
   map.src = allMap;
   officeButton.textContent = "Офисы Softline";
 
   mapsContent.buttons.forEach((button) => {
-    getButton(mapsButtons, "maps__header__button", button, () =>
+    getButton(mapsButtons, "maps__header__regions__button fs18", button, () =>
       changeMap(maps, button)
     );
   });
