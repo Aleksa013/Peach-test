@@ -4,6 +4,13 @@ import direction3 from "./../assets/imgs/direction3.png";
 import direction4 from "./../assets/imgs/direction4.png";
 import direction5 from "./../assets/imgs/direction5.png";
 import direction6 from "./../assets/imgs/direction6.png";
+import medicine from "./../assets/imgs/medicine.png";
+import cake from "./../assets/imgs/cake.png";
+import phone from "./../assets/imgs/phone.png";
+import gym from "./../assets/imgs/gym.png";
+import hands from "./../assets/imgs/hands.png";
+import printer from "./../assets/imgs/printer.png";
+import house from "./../assets/imgs/house.png";
 
 export const menuItems = [
   "Облачные решения",
@@ -90,4 +97,52 @@ export const directionContent = {
       bgPath: direction6,
     },
   ],
+};
+
+export const benefitsContent = {
+  package: {
+    header: "Компенсационный пакет",
+    benefits: [
+      {
+        text: "ДМС",
+        icon: medicine,
+      },
+      {
+        text: "Выходной<br>в день рождения",
+        icon: cake,
+      },
+      {
+        text: "Корпоративная мобильная связь",
+        icon: phone,
+      },
+      {
+        text: "Корпоративные скидки на спорт",
+        icon: gym,
+      },
+      {
+        text: "LTI",
+        icon: hands,
+      },
+    ],
+    nameClass: "first",
+  },
+  motivation: {
+    header: "Программа дополнительной мотивации",
+    accent: "доплата 12% от суммы",
+    benefits: [
+      {
+        text: "Оргтехники",
+        icon: printer,
+      },
+      {
+        text: "ДМС",
+        icon: medicine,
+      },
+      {
+        text: "Ипотеки",
+        icon: house,
+      },
+    ],
+    nameClass: "second",
+  },
 };

@@ -1,10 +1,10 @@
 $bg-color: #f6f6f6;
+$bg-icon-color: #f2f2f2;
 $white-color: #fff;
 $red-color: #d43152;
 $burgundy-color: #b01736;
 $grey-color: #d9d9d9;
 $grey-dark-color: #444444;
-$opacity-color: #2d3653;
 
 @font-face {
   font-family: "Proxima_400";
@@ -50,6 +50,10 @@ body {
 
 .fs32 {
   font-size: 32px;
+}
+
+.fs40 {
+  font-size: 40px;
 }
 
 .fs56 {

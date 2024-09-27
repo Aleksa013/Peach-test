@@ -1,0 +1,81 @@
+@import "./vars.scss";
+
+.benefits {
+  width: 88.5%;
+  margin: 6.5% auto;
+  background-color: $white-color;
+  &__part {
+    margin: 0 auto;
+    width: 86.5%;
+    display: flex;
+    color: $grey-dark-color;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    &__header {
+      width: 100%;
+      text-align: center;
+      letter-spacing: 1px;
+      margin: 7.8% 0 4.4% 0.15%;
+    }
+
+    &__accent {
+      width: 100%;
+      text-align: center;
+      color: $burgundy-color;
+      margin: 0.1% 0 4.5%;
+      letter-spacing: 0.5px;
+    }
+  }
+}
+
+.second {
+  margin: 5.5% auto;
+  width: 100%;
+  justify-content: center;
+
+  &::before {
+    content: "";
+    border: 1px solid $grey-color;
+    margin: auto;
+    width: 95%;
+  }
+
+  .benefits__part__header {
+    width: 100%;
+    text-align: center;
+    letter-spacing: 0.6px;
+    margin: 6.4% 0 0 0.15%;
+  }
+
+  .benefit {
+    width: 17.5%;
+  }
+}
+.benefit {
+  display: flex;
+  flex-direction: column;
+  width: 19%;
+  align-items: center;
+  &__icon {
+    width: 7rem;
+    height: 7rem;
+    display: block;
+    border-radius: 50%;
+    background-color: $bg-icon-color;
+    background-repeat: no-repeat;
+    background-position: 53% 52%;
+  }
+  &__text {
+    margin: 6% 0;
+    line-height: 19.8px;
+    text-align: center;
+  }
+  &:nth-of-type(2) {
+    .benefit__text {
+      width: 70%;
+    }
+  }
+}

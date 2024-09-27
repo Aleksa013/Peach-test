@@ -6,6 +6,7 @@ import { getNumbers } from "./components/getNumbersBlock.js";
 import { getMap } from "./components/getMap.js";
 import { getMission } from "./components/getMission.js";
 import { getDirection } from "./components/getDirection.js";
+import { getBenefits } from "./components/getBenefits.js";
 
 const body = document.querySelector("body");
 
@@ -20,3 +21,4 @@ getNumbers(container);
 getMap(container);
 getMission(container);
 getDirection(container);
+getBenefits(container);
