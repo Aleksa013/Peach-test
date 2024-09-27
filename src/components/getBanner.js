@@ -2,7 +2,7 @@ import "./../styles/banner.scss";
 import { bannerContent } from "./../constansts/constants.js";
 
 export const getBanner = (parent) => {
-  const banner = document.createElement("div");
+  const banner = document.createElement("section");
   const text = document.createElement("h2");
   const buttonLink = document.createElement("a");
 

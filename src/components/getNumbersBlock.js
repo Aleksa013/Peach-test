@@ -2,7 +2,7 @@ import "./../styles/numbers.scss";
 import { numberContent } from "../constansts/constants.js";
 
 export const getNumbers = (parent) => {
-  const numbers = document.createElement("div");
+  const numbers = document.createElement("section");
   numbers.className = "numbers";
 
   numbers.className = "numbers";

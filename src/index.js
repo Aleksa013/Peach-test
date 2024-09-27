@@ -5,6 +5,7 @@ import { getAbout } from "./components/getAboutBlock.js";
 import { getNumbers } from "./components/getNumbersBlock.js";
 import { getMap } from "./components/getMap.js";
 import { getMission } from "./components/getMission.js";
+import { getDirection } from "./components/getDirection.js";
 
 const body = document.querySelector("body");
 
@@ -18,3 +19,4 @@ getAbout(container);
 getNumbers(container);
 getMap(container);
 getMission(container);
+getDirection(container);

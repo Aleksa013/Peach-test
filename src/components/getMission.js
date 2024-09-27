@@ -2,7 +2,7 @@ import "./../styles/mission.scss";
 import { missionsContent } from "../constansts/constants.js";
 
 export const getMission = (parent) => {
-  const mission = document.createElement("div");
+  const mission = document.createElement("section");
   const left = document.createElement("div");
   const right = document.createElement("div");
   const header = document.createElement("h2");

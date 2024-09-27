@@ -4,6 +4,7 @@ $red-color: #d43152;
 $burgundy-color: #b01736;
 $grey-color: #d9d9d9;
 $grey-dark-color: #444444;
+$opacity-color: #2d3653;
 
 @font-face {
   font-family: "Proxima_400";
@@ -33,6 +34,10 @@ body {
   flex-direction: column;
   margin: 0 auto;
   background-color: $bg-color;
+}
+
+.fs17 {
+  font-size: 17px;
 }
 
 .fs18 {

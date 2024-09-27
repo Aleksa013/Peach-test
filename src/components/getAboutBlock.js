@@ -2,7 +2,7 @@ import "./../styles/about.scss";
 import { aboutContent } from "../constansts/constants.js";
 
 export const getAbout = (parent) => {
-  const about = document.createElement("div");
+  const about = document.createElement("section");
   const aboutText = document.createElement("p");
   const companyName = document.createElement("span");
 

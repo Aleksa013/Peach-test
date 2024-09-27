@@ -7,7 +7,7 @@ import { closeList, openList } from "../utils/openList.js";
 import allMap from "./../assets/imgs/map_all.png";
 
 export const getMap = (parent) => {
-  const maps = document.createElement("div");
+  const maps = document.createElement("section");
   const header = document.createElement("div");
   const map = document.createElement("div");
   const officeButton = document.createElement("button");
