@@ -71,3 +71,15 @@ body {
 .grey-dark {
   color: $grey-dark-color;
 }
+
+.button {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  font-size: 40px;
+  border: none;
+  &:hover {
+    cursor: pointer;
+    background-color: #d43152;
+  }
+}

@@ -1,0 +1,40 @@
+@import "./vars.scss";
+
+.galery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 0 5% 5%;
+  gap: 22%;
+  &__header {
+    margin: 2% 0 0 0.8%;
+    letter-spacing: 1px;
+  }
+  &__slider {
+    width: 98.5%;
+    height: 52em;
+    margin: 2.5% auto;
+  }
+  .slider__buttons {
+    display: flex;
+    margin: 2% 0.5%;
+  }
+  .prev {
+    margin-right: 15%;
+  }
+  .pagination_wrapper {
+    width: 98.5%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    .pagination {
+      width: 19%;
+      background-color: $grey-color;
+      height: 5px;
+      &:hover {
+        background-color: $burgundy-color;
+        cursor: pointer;
+      }
+    }
+  }
+}

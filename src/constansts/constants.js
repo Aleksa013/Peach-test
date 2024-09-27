@@ -146,3 +146,7 @@ export const benefitsContent = {
     nameClass: "second",
   },
 };
+
+export const galeryContent = {
+  header: "Корпоративная жизнь",
+};

@@ -7,6 +7,7 @@ import { getMap } from "./components/getMap.js";
 import { getMission } from "./components/getMission.js";
 import { getDirection } from "./components/getDirection.js";
 import { getBenefits } from "./components/getBenefits.js";
+import { getGalery } from "./components/getGalery.js";
 
 const body = document.querySelector("body");
 
@@ -22,3 +23,4 @@ getMap(container);
 getMission(container);
 getDirection(container);
 getBenefits(container);
+getGalery(container);
