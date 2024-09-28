@@ -20,8 +20,8 @@ export const getDirection = (parent) => {
 
     solution.className = "solution";
     infoBlock.className = "solution__info";
-    solutionHeader.className = "solution__info_header fs24";
-    solutionText.className = "solution__info_text fs17";
+    solutionHeader.className = "solution__info_header";
+    solutionText.className = "solution__info_text";
 
     solution.style.backgroundImage = `url(${value.bgPath})`;
     solutionHeader.textContent = value.solution;

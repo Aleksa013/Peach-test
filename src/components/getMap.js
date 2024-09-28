@@ -9,22 +9,24 @@ import allMap from "./../assets/imgs/map_all.png";
 export const getMap = (parent) => {
   const maps = document.createElement("section");
   const header = document.createElement("div");
+  const mapWrapper = document.createElement("div");
   const map = document.createElement("div");
   const officeButton = document.createElement("button");
   const mapsButtons = document.createElement("div");
 
   officeButton.className = "button_office";
   maps.className = "maps";
-  map.className = "maps__body";
+  mapWrapper.className = "maps__body";
+  map.className = "map";
   header.className = "maps__header shadow";
   mapsButtons.className = "maps__header__regions";
-  officeButton.classList.add("maps__header__offices", "fs24");
+  officeButton.classList.add("maps__header__offices");
   map.style.backgroundImage = `url(${allMap})`;
   officeButton.textContent = "Офисы Softline";
 
   mapsContent.buttons.forEach((button) => {
-    getButton(mapsButtons, "maps__header__regions__button fs18", button, () =>
-      changeMap(maps, button)
+    getButton(mapsButtons, "maps__header__regions__button", button, () =>
+      changeMap(mapWrapper, button)
     );
   });
 
@@ -36,6 +38,7 @@ export const getMap = (parent) => {
   header.append(officeButton);
   header.append(mapsButtons);
   maps.append(header);
-  maps.append(map);
+  mapWrapper.append(map);
+  maps.append(mapWrapper);
   parent.append(maps);
 };

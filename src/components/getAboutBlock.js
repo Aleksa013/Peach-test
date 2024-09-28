@@ -7,7 +7,7 @@ export const getAbout = (parent) => {
   const companyName = document.createElement("span");
 
   about.className = "about shadow";
-  aboutText.classList.add("about__text", "fs32");
+  aboutText.classList.add("about__text");
   companyName.className = "burgundy";
 
   companyName.textContent = aboutContent.companyName;

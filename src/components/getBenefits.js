@@ -18,7 +18,7 @@ function createBenefitsPart(parent, data, nameClass) {
   const header = document.createElement("h2");
 
   block.className = `benefits__part ${nameClass}`;
-  header.classList.add("benefits__part__header", data.accent ? "fs40" : "fs56");
+  header.classList.add("benefits__part__header");
 
   header.textContent = data.header;
 
@@ -26,7 +26,7 @@ function createBenefitsPart(parent, data, nameClass) {
 
   if (data.accent) {
     const accent = document.createElement("p");
-    accent.classList.add("benefits__part__accent", "fs40");
+    accent.classList.add("benefits__part__accent");
     accent.textContent = data.accent;
     block.appendChild(accent);
   }
@@ -44,7 +44,7 @@ function createBenefit(parent, dataBenefit) {
 
   benefit.classList = "benefit";
   benefitIcon.classList = "benefit__icon";
-  benefitText.classList = "benefit__text fs18";
+  benefitText.classList = "benefit__text";
 
   benefitIcon.style.backgroundImage = `url(${dataBenefit.icon})`;
   benefitText.innerHTML = dataBenefit.text;

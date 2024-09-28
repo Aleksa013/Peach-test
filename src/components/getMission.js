@@ -11,8 +11,8 @@ export const getMission = (parent) => {
   mission.className = "mission";
   left.className = "bg bg_left";
   right.className = "bg bg_right";
-  header.className = "mission__header fs56";
-  text.className = "mission__text fs32";
+  header.className = "mission__header";
+  text.className = "mission__text";
 
   header.textContent = missionsContent.header;
   text.textContent = missionsContent.text;

@@ -7,8 +7,8 @@ export const getBanner = (parent) => {
   const buttonLink = document.createElement("a");
 
   banner.className = "banner";
-  text.classList.add("banner__text", "fs56");
-  buttonLink.classList.add("banner__button", "fs18");
+  text.classList.add("banner__text");
+  buttonLink.classList.add("banner__button");
 
   text.innerHTML = bannerContent.text;
   buttonLink.textContent = bannerContent.buttonText;

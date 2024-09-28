@@ -15,7 +15,7 @@ export const getGalery = (parent) => {
   const paginationBlock = document.createElement("div");
 
   galery.classList.add("galery");
-  header.classList.add("galery__header", "fs56");
+  header.classList.add("galery__header");
   slider.classList.add("galery__slider");
   buttonsBlock.classList.add("slider__buttons");
   paginationBlock.classList.add("pagination_wrapper");

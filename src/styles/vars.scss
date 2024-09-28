@@ -30,39 +30,11 @@ body {
 }
 
 .container {
-  width: clamp(290px, 95%, 1250px);
+  width: clamp(290px, 99%, 1250px);
   display: flex;
   flex-direction: column;
   margin: 0 auto;
   background-color: $white-color;
-}
-
-.fs17 {
-  font-size: 17px;
-}
-
-.fs18 {
-  font-size: 18px;
-}
-
-.fs24 {
-  font-size: 24px;
-}
-
-.fs32 {
-  font-size: 32px;
-}
-
-.fs40 {
-  font-size: 40px;
-}
-
-.fs56 {
-  font-size: 56px;
-}
-
-.fs80 {
-  font-size: 80px;
 }
 
 .burgundy {
@@ -88,7 +60,10 @@ body {
 .shadow {
   background-color: $white-color;
   filter: drop-shadow(0 0 0.75rem $shadow-color);
-  // box-shadow:
-  //   0px 10px 5px $red-color,
-  //   0px -10px 5px $red-color;
+}
+
+@media screen and (max-width: 800px) {
+  .container {
+    width: clamp(290px, 60%, 1250px);
+  }
 }

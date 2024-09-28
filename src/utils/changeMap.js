@@ -9,11 +9,11 @@ import siberiaMap from "./../assets/imgs/map_siberia.png";
 import vestMap from "./../assets/imgs/map_vest.png";
 
 export const changeMap = (parent, newMap) => {
-  const oldMap = document.querySelector(".maps__body");
+  const oldMap = document.querySelector(".map");
   if (oldMap) {
     oldMap.remove();
     const currentMap = document.createElement("div");
-    currentMap.classList.add("maps__body");
+    currentMap.classList.add("map");
     let path = `url(${allMap})`;
     switch (newMap) {
       case "Центр":

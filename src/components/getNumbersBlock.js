@@ -6,14 +6,14 @@ export const getNumbers = (parent) => {
   numbers.className = "numbers";
 
   numbers.className = "numbers";
-  Object.values(numberContent).forEach((number, index) => {
+  Object.values(numberContent).forEach((number) => {
     const block = document.createElement("div");
     const numberSpan = document.createElement("span");
     const textSpan = document.createElement("span");
 
-    block.classList.add("numbers__item", index);
-    numberSpan.classList.add("numbers__item__number", "burgundy", "fs80");
-    textSpan.classList.add("numbers__item__text", "grey-dark", "fs18");
+    block.classList.add("numbers__item");
+    numberSpan.classList.add("numbers__item__number", "burgundy");
+    textSpan.classList.add("numbers__item__text", "grey-dark");
 
     numberSpan.innerHTML = number[0];
     textSpan.textContent = number[1];

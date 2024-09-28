@@ -11,6 +11,7 @@
     width: 100%;
     text-align: center;
     font-family: "Proxima_600";
+    font-size: 56px;
   }
   .solution {
     position: relative;
@@ -31,10 +32,12 @@
       justify-content: flex-start;
       background: rgba(45, 54, 83, 0.6);
       &_header {
+        font-size: 24px;
         line-height: 24px;
         font-family: "Proxima_400";
       }
       &_text {
+        font-size: 17px;
         display: none;
       }
     }
@@ -46,6 +49,42 @@
       .solution__info_text {
         display: block;
         line-height: 23.8px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .direction {
+    padding: 0;
+    gap: 2%;
+    &__header {
+      margin: 26% auto 3%;
+      font-size: 28px;
+      line-height: 28px;
+    }
+    .solution {
+      margin: 2% auto 1.8%;
+      width: 96%;
+      height: 3.7rem;
+      &__info {
+        top: 1%;
+        &_header {
+          font-size: 20px;
+          line-height: 19px;
+          margin: 7% 0.5%;
+          width: 82%;
+          letter-spacing: 0.2px;
+        }
+        &_text {
+          display: none;
+        }
+      }
+      &:nth-of-type(5),
+      &:last-of-type {
+        .solution__info_header {
+          margin: 3% 0.5% 4%;
+        }
       }
     }
   }

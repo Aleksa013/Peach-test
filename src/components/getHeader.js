@@ -10,7 +10,7 @@ export const getHeader = (parent) => {
   header.className = "header";
   logo.className = "header__logo";
   logo.src = logoImage;
-  menu.classList.add("header__menu", "fs18");
+  menu.classList.add("header__menu");
 
   menuItems.forEach((item) => {
     const menuItem = document.createElement("li");

@@ -17,6 +17,7 @@
     &__header {
       width: 100%;
       text-align: center;
+      font-size: 56px;
       letter-spacing: 1px;
       margin: 7.8% 0 4.4% 0.15%;
     }
@@ -26,6 +27,7 @@
       text-align: center;
       color: $burgundy-color;
       margin: 0.1% 0 4.5%;
+      font-size: 40px;
       letter-spacing: 0.5px;
     }
   }
@@ -35,6 +37,10 @@
   margin: 5.5% auto;
   width: 100%;
   justify-content: center;
+
+  .benefits__part__header {
+    font-size: 40px;
+  }
 
   &::before {
     content: "";
@@ -70,12 +76,69 @@
   }
   &__text {
     margin: 6% 0;
+    width: 70%;
+    font-size: 18px;
     line-height: 19.8px;
     text-align: center;
   }
-  &:nth-of-type(2) {
-    .benefit__text {
-      width: 70%;
+}
+
+@media screen and (max-width: 600px) {
+  .benefits {
+    width: 100%;
+    padding: 0;
+    &__part {
+      width: 100%;
+      justify-content: center;
+      gap: 5%;
+      &__header {
+        margin: 17% 0 13.5%;
+        font-size: 28px;
+        line-height: 28px;
+        letter-spacing: 0.5px;
+      }
+    }
+    .benefit {
+      width: 40%;
+      margin: 0 0 4%;
+      &__icon {
+        width: 5rem;
+        height: 5rem;
+        background-size: 45%;
+      }
+      &__text {
+        margin: 11% 0 3%;
+        width: 100%;
+        font-size: 16px;
+        line-height: 19px;
+        margin: 9% 0;
+      }
+      &:nth-of-type(5) {
+        .benefit__icon {
+          background-size: 59%;
+        }
+      }
+    }
+  }
+
+  .second {
+    margin: 0.5% auto;
+    gap: 2%;
+    justify-content: center;
+    .benefit {
+      width: 34%;
+      margin: 0 0 5.5%;
+    }
+    .benefits__part__header {
+      font-size: 22px;
+      line-height: 26.4px;
+      margin: 8% 0 1%;
+      letter-spacing: 0.4px;
+    }
+    .benefits__part__accent {
+      margin: 0 0 8%;
+      font-size: 22px;
+      line-height: 26.4px;
     }
   }
 }
