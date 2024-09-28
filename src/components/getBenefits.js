@@ -4,7 +4,7 @@ import "./../styles/benefits.scss";
 export const getBenefits = (parent) => {
   const benefits = document.createElement("section");
 
-  benefits.className = "benefits";
+  benefits.className = "benefits shadow";
 
   Object.values(benefitsContent).forEach((value) =>
     createBenefitsPart(benefits, value, value.nameClass)

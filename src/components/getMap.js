@@ -16,7 +16,7 @@ export const getMap = (parent) => {
   officeButton.className = "button_office";
   maps.className = "maps";
   map.className = "maps__body";
-  header.className = "maps__header";
+  header.className = "maps__header shadow";
   mapsButtons.className = "maps__header__regions";
   officeButton.classList.add("maps__header__offices", "fs24");
   map.style.backgroundImage = `url(${allMap})`;

@@ -10,6 +10,7 @@ let count = 0;
 
 export const changeSlide = (direction) => {
   const slideBlock = document.querySelector(".galery__slider");
+  const paginations = document.querySelectorAll(".pagination");
 
   if (slideBlock) {
     if (direction === "next") {
@@ -21,5 +22,11 @@ export const changeSlide = (direction) => {
 
     const currentSlide = slides[count];
     slideBlock.style.backgroundImage = `url(${currentSlide})`;
+
+    paginations.forEach((pagination, index) => {
+      index === count
+        ? pagination.classList.add("active")
+        : pagination.classList.remove("active");
+    });
   }
 };

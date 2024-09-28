@@ -4,7 +4,7 @@ import slide1 from "./../assets/imgs/slide1.png";
 
 import { getButton } from "../utils/getButton.js";
 import { changeSlide } from "../utils/changeSlide.js";
-import { generateElements } from "../utils/generateElements.js";
+import { generateSpans } from "../utils/generateSpans.js";
 import { galeryContent } from "../constansts/constants.js";
 
 export const getGalery = (parent) => {
@@ -26,7 +26,7 @@ export const getGalery = (parent) => {
   getButton(buttonsBlock, "prev button", "<", () => changeSlide("prev"));
   getButton(buttonsBlock, "next button", ">", () => changeSlide("next"));
 
-  generateElements(paginationBlock, "span", "pagination", 5);
+  generateSpans(paginationBlock, "pagination", 5);
 
   galery.append(header);
   galery.append(buttonsBlock);
