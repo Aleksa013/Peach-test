@@ -62,8 +62,91 @@ body {
   filter: drop-shadow(0 0 0.75rem $shadow-color);
 }
 
+.relatives {
+  position: relative;
+  background-color: rgba(215, 215, 215, 0.8);
+}
+
+.animationLeftUp {
+  animation: 0.5s linear arrowUpLeft both;
+}
+
+.animationRightUp {
+  animation: 0.5s linear arrowUpRight both;
+}
+
+.animationLeftDown {
+  animation: 0.5s linear arrowDownLeft both;
+}
+
+.animationRightDown {
+  animation: 0.5s linear arrowDownRight both;
+}
+
+.showBlock {
+  animation: 1s linear both showBlock;
+}
+
+.hideBlock {
+  animation: 0.5s linear both hideBlock;
+}
+
 @media screen and (max-width: 800px) {
   .container {
     width: clamp(290px, 60%, 1250px);
+  }
+}
+
+@keyframes arrowUpLeft {
+  from {
+    transform: rotate(38deg);
+  }
+  to {
+    transform: rotate(-38deg);
+  }
+}
+
+@keyframes arrowUpRight {
+  from {
+    transform: rotate(-38deg);
+  }
+  to {
+    transform: rotate(41deg);
+  }
+}
+
+@keyframes arrowDownLeft {
+  from {
+    transform: rotate(-38deg);
+  }
+  to {
+    transform: rotate(38deg);
+  }
+}
+
+@keyframes arrowDownRight {
+  from {
+    transform: rotate(41deg);
+  }
+  to {
+    transform: rotate(-38deg);
+  }
+}
+
+@keyframes showBlock {
+  from {
+    filter: opacity(0);
+  }
+  to {
+    filter: opacity(1);
+  }
+}
+
+@keyframes hideBlock {
+  from {
+    filter: opacity(1);
+  }
+  to {
+    filter: opacity(0);
   }
 }

@@ -2,27 +2,32 @@ import "./../styles/maps.scss";
 import { mapsContent } from "../constansts/constants.js";
 import { changeMap } from "../utils/changeMap.js";
 import { getButton } from "../utils/getButton.js";
-import { closeList, openList } from "../utils/openList.js";
+import { openList, closeList } from "../utils/openList.js";
+import { generateElement } from "../utils/generateElement.js";
 
 import allMap from "./../assets/imgs/map_all.png";
+import { generateSpans } from "../utils/generateSpans.js";
 
 export const getMap = (parent) => {
-  const maps = document.createElement("section");
-  const header = document.createElement("div");
-  const mapWrapper = document.createElement("div");
-  const map = document.createElement("div");
-  const officeButton = document.createElement("button");
-  const mapsButtons = document.createElement("div");
+  const maps = generateElement("section", "maps", parent);
+  const header = generateElement("div", "maps__header shadow", maps);
+  const mapWrapper = generateElement("div", "maps__body", maps);
+  const map = generateElement("div", "map", mapWrapper);
+  const officeButtonWrapper = generateElement(
+    "div",
+    "maps__header__offices",
+    header
+  );
+  const officeButton = getButton(
+    officeButtonWrapper,
+    "button_offices",
+    "Офисы Softline"
+  );
+  const arrowIcon = generateElement("div", "arrow", officeButtonWrapper);
+  const mapsButtons = generateElement("div", "maps__header__regions", header);
+  generateSpans(arrowIcon, "arrow__part", 2, false);
 
-  officeButton.className = "button_office";
-  maps.className = "maps";
-  mapWrapper.className = "maps__body";
-  map.className = "map";
-  header.className = "maps__header shadow";
-  mapsButtons.className = "maps__header__regions";
-  officeButton.classList.add("maps__header__offices");
   map.style.backgroundImage = `url(${allMap})`;
-  officeButton.textContent = "Офисы Softline";
 
   mapsContent.buttons.forEach((button) => {
     getButton(mapsButtons, "maps__header__regions__button", button, () =>
@@ -30,15 +35,7 @@ export const getMap = (parent) => {
     );
   });
 
-  officeButton.addEventListener(
-    "click",
-    officeButton.classList.contains("open") ? closeList() : openList()
+  officeButton.addEventListener("click", () =>
+    officeButtonWrapper.classList.contains("open") ? closeList() : openList()
   );
-
-  header.append(officeButton);
-  header.append(mapsButtons);
-  maps.append(header);
-  mapWrapper.append(map);
-  maps.append(mapWrapper);
-  parent.append(maps);
 };
