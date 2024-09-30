@@ -2,7 +2,7 @@
 
 .header {
   width: 88.5%;
-  padding: 2.1% 5.8% 2.3%;
+  padding: 2.2% 5.8% 2.4% 5.7%;
   display: flex;
   justify-content: space-between;
   border: 1px solid $grey-color;
@@ -13,17 +13,45 @@
   }
   &__menu {
     margin: 0;
-    width: 62%;
+    width: clamp(277px, 75%, 688px);
     display: flex;
     gap: 3.2%;
-
     &__item {
       margin-top: 0.4%;
       list-style-type: none;
       color: $grey-dark-color;
       font-family: "Proxima_400";
+      font-size: 18px;
       line-height: 20px;
       letter-spacing: 0.19px;
+    }
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .header {
+    width: 98%;
+    padding: 5% 0 0 1%;
+    flex-direction: column;
+    flex-wrap: wrap;
+    &__logo {
+      height: 25px;
+      width: 125px;
+    }
+    &__menu {
+      margin: 5% 0.5%;
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      padding: 0;
+      gap: 3%;
+      &__item {
+        margin: 1% 0 0.5%;
+        font-family: "Proxima_400";
+        font-size: 14px;
+        line-height: 16px;
+        letter-spacing: 0.19px;
+      }
     }
   }
 }

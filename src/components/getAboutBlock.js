@@ -1,19 +1,20 @@
 import "./../styles/about.scss";
 import { aboutContent } from "../constansts/constants.js";
+import { generateElement } from "../utils/generateElement.js";
 
 export const getAbout = (parent) => {
-  const about = document.createElement("div");
-  const aboutText = document.createElement("p");
-  const companyName = document.createElement("span");
-
-  about.className = "about";
-  aboutText.classList.add("about__text", "fs32");
-  companyName.className = "burgundy";
-
-  companyName.textContent = aboutContent.companyName;
-  aboutText.innerHTML = aboutContent.text;
+  const about = generateElement("section", "about shadow", parent);
+  const aboutText = generateElement(
+    "p",
+    "about__text",
+    about,
+    aboutContent.text
+  );
+  const companyName = generateElement(
+    "span",
+    "burgundy",
+    "",
+    aboutContent.companyName
+  );
   aboutText.prepend(companyName);
-  about.append(aboutText);
-
-  parent.append(about);
 };

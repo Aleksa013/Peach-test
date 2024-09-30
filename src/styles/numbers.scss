@@ -2,7 +2,7 @@
 
 .numbers {
   width: 72%;
-  padding: 0 14%;
+  padding: 0 14% 3%;
   display: grid;
   grid: repeat(2, 175px) / 1fr 1fr 1fr;
   font-family: "Proxima_600";
@@ -14,34 +14,199 @@
     &__number {
       letter-spacing: 0px;
       word-spacing: -4px;
+      font-size: 80px;
       line-height: 64px;
+      .sign {
+        margin: 7% 2% 0 3%;
+        position: relative;
+        width: 29px;
+        height: 30px;
+        &_less {
+          position: absolute;
+          width: 27px;
+          display: inline-block;
+          height: 7px;
+          background: $burgundy-color;
+          border-radius: 2px;
+          &:first-of-type {
+            top: 7%;
+            right: 19%;
+            transform: rotate(22deg);
+          }
+          &:last-of-type {
+            top: 37%;
+            right: 19%;
+            transform: rotate(-22deg);
+          }
+        }
+        &_plus {
+          position: absolute;
+          width: 27px;
+          display: inline-block;
+          height: 5px;
+          background: $burgundy-color;
+          border-radius: 2px;
+          &:first-of-type {
+            top: 25%;
+            right: 4%;
+            transform: rotate(89deg);
+          }
+          &:last-of-type {
+            top: 25%;
+            right: 8%;
+            transform: rotate(0deg);
+          }
+        }
+      }
     }
     &__text {
       margin: 2%;
       text-align: start;
+      font-size: 18px;
       line-height: 21.6px;
     }
     &:first-of-type {
       align-items: flex-start;
+      .numbers__item__number {
+        width: 100%;
+        display: flex;
+      }
     }
     &:nth-of-type(3) {
       .numbers__item__number {
         margin: 0 11%;
+        width: 28%;
+        display: flex;
       }
     }
     &:nth-of-type(4) {
-      margin: 0px 0 0 19%;
+      margin: 0px 0 0 51%;
+      align-items: flex-start;
+      .numbers__item__number {
+        margin: 0;
+        width: 100%;
+        display: flex;
+      }
+
       .numbers__item__text {
-        text-align: center;
+        text-align: start;
         width: 96%;
+        margin: 2% 0;
       }
     }
     &:last-of-type {
-      margin: 0px 0 0 47%;
+      margin: 0px 0 0 79%;
+      align-items: flex-start;
+      .numbers__item__number {
+        margin: 0;
+        width: 100%;
+        display: flex;
+      }
       .numbers__item__text {
         margin: 2% -1%;
         width: 69%;
         text-align: start;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .numbers {
+    padding: 0;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    &__item {
+      width: 45%;
+      display: flex;
+      align-items: center;
+      &__number {
+        font-size: 40px;
+        line-height: 32px;
+        .sign {
+          margin: 7% 0% 0 3%;
+          position: relative;
+          width: 20px;
+          height: 25px;
+          &_less {
+            width: 12px;
+            height: 3px;
+
+            &:first-of-type {
+              top: 11%;
+              right: 53%;
+            }
+            &:last-of-type {
+              top: 30%;
+              right: 52%;
+            }
+          }
+          &_plus {
+            position: absolute;
+            width: 15px;
+            display: inline-block;
+            height: 3px;
+            background: $burgundy-color;
+            border-radius: 2px;
+            &:first-of-type {
+              top: 6%;
+              right: 4%;
+              transform: rotate(89deg);
+            }
+            &:last-of-type {
+              top: 9%;
+              right: 8%;
+              transform: rotate(0deg);
+            }
+          }
+        }
+      }
+      &__text {
+        margin: 2%;
+        text-align: center;
+        font-size: 16px;
+        line-height: 24px;
+      }
+      &:nth-of-type(odd) {
+        width: 44%;
+        margin: 0 0 9%;
+        .numbers__item__text {
+          margin: 3% 0 0 1%;
+          width: 100%;
+        }
+      }
+      &:nth-of-type(2) {
+        width: 49%;
+        margin: 0;
+        .numbers__item__text {
+          width: 100%;
+        }
+      }
+      &:nth-of-type(4) {
+        width: 49%;
+        margin: 0;
+        align-items: flex-start;
+        .numbers__item__number {
+          margin: 0 0 0 15%;
+        }
+        .numbers__item__text {
+          width: 100%;
+          margin: 0 0 0 20%;
+        }
+      }
+      &:last-of-type {
+        margin: 0 0 17%;
+        width: 64%;
+        .numbers__item__number {
+          margin: -2% 0 0 20%;
+        }
+        .numbers__item__text {
+          margin: -3% 0 0 1%;
+          text-align: center;
+          line-height: 21px;
+        }
       }
     }
   }

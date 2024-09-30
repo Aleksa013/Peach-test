@@ -1,27 +1,45 @@
 import "./../styles/numbers.scss";
 import { numberContent } from "../constansts/constants.js";
+import { generateElement } from "../utils/generateElement.js";
+import { generateSpans } from "../utils/generateSpans.js";
 
 export const getNumbers = (parent) => {
-  const numbers = document.createElement("div");
-  numbers.className = "numbers";
+  const numbers = generateElement("section", "numbers", parent);
 
-  numbers.className = "numbers";
   Object.values(numberContent).forEach((number, index) => {
-    const block = document.createElement("div");
-    const numberSpan = document.createElement("span");
-    const textSpan = document.createElement("span");
-
-    block.classList.add("numbers__item", index);
-    numberSpan.classList.add("numbers__item__number", "burgundy", "fs80");
-    textSpan.classList.add("numbers__item__text", "grey-dark", "fs18");
-
-    numberSpan.innerHTML = number[0];
-    textSpan.textContent = number[1];
-
-    block.append(numberSpan);
-    block.append(textSpan);
-    numbers.append(block);
+    const block = generateElement("div", "numbers__item", numbers);
+    const numberBlock = generateElement(
+      "span",
+      "numbers__item__number burgundy",
+      block,
+      number[0]
+    );
+    const blockSpan = generateElement("div", "sign", "");
+    if (index === 0) {
+      generateSpans(blockSpan, "sign_less", 2, false);
+      numberBlock.prepend(blockSpan);
+      generateElement(
+        "span",
+        "numbers__item__text grey-dark",
+        block,
+        number[1]
+      );
+    } else if (index === 3 || index === 4) {
+      generateSpans(blockSpan, "sign_plus", 2, false);
+      generateElement(
+        "span",
+        "numbers__item__text grey-dark",
+        block,
+        number[1]
+      );
+      numberBlock.append(blockSpan);
+    } else {
+      generateElement(
+        "span",
+        "numbers__item__text grey-dark",
+        block,
+        number[1]
+      );
+    }
   });
-
-  parent.append(numbers);
 };

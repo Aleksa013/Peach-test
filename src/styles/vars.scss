@@ -1,4 +1,6 @@
 $bg-color: #f6f6f6;
+$bg-icon-color: #f2f2f2;
+$shadow-color: #f7e8eb;
 $white-color: #fff;
 $red-color: #d43152;
 $burgundy-color: #b01736;
@@ -21,33 +23,18 @@ html,
 body {
   height: 100%;
   font-family: "Proxima_400", "Roboto", sans-serif;
+  box-sizing: border-box;
 }
 body {
   margin: 0;
 }
 
 .container {
-  width: clamp(290px, 95%, 1250px);
+  width: clamp(290px, 99%, 1250px);
   display: flex;
   flex-direction: column;
   margin: 0 auto;
-  background-color: $bg-color;
-}
-
-.fs18 {
-  font-size: 18px;
-}
-
-.fs32 {
-  font-size: 32px;
-}
-
-.fs56 {
-  font-size: 56px;
-}
-
-.fs80 {
-  font-size: 80px;
+  background-color: $white-color;
 }
 
 .burgundy {
@@ -56,4 +43,117 @@ body {
 
 .grey-dark {
   color: $grey-dark-color;
+}
+
+.white {
+  background-color: $white-color;
+}
+
+.button {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  font-size: 40px;
+  border: none;
+  &:hover {
+    cursor: pointer;
+    background-color: #d43152;
+  }
+}
+
+.shadow {
+  background-color: $white-color;
+  filter: drop-shadow(0 0 0.75rem $shadow-color);
+}
+
+.relatives {
+  position: relative;
+  background-color: rgba(215, 215, 215, 0.8);
+}
+
+
+
+
+.animationLeftUp {
+  animation: 0.5s linear arrowUpLeft both;
+}
+
+.animationRightUp {
+  animation: 0.5s linear arrowUpRight both;
+}
+
+.animationLeftDown {
+  animation: 0.5s linear arrowDownLeft both;
+}
+
+.animationRightDown {
+  animation: 0.5s linear arrowDownRight both;
+}
+
+.showBlock {
+  animation: 1s linear both showBlock;
+}
+
+.hideBlock {
+  animation: 0.5s linear both hideBlock;
+}
+
+@media screen and (max-width: 800px) {
+  .container {
+    width: clamp(290px, 60%, 1250px);
+  }
+}
+
+@keyframes arrowUpLeft {
+  from {
+    transform: rotate(38deg);
+  }
+  to {
+    transform: rotate(-38deg);
+  }
+}
+
+@keyframes arrowUpRight {
+  from {
+    transform: rotate(-38deg);
+  }
+  to {
+    transform: rotate(41deg);
+  }
+}
+
+@keyframes arrowDownLeft {
+  from {
+    transform: rotate(-38deg);
+  }
+  to {
+    transform: rotate(38deg);
+  }
+}
+
+@keyframes arrowDownRight {
+  from {
+    transform: rotate(41deg);
+  }
+  to {
+    transform: rotate(-38deg);
+  }
+}
+
+@keyframes showBlock {
+  from {
+    filter: opacity(0);
+  }
+  to {
+    filter: opacity(1);
+  }
+}
+
+@keyframes hideBlock {
+  from {
+    filter: opacity(1);
+  }
+  to {
+    filter: opacity(0);
+  }
 }

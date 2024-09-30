@@ -1,24 +1,16 @@
 import "./../styles/header.scss";
 import logoImage from "./../assets/logo.png";
 import { menuItems } from "../constansts/constants.js";
+import { generateElement } from "../utils/generateElement.js";
 
 export const getHeader = (parent) => {
-  const header = document.createElement("header");
-  const logo = document.createElement("img");
-  const menu = document.createElement("ul");
+  const header = generateElement("header", "header", parent);
+  const logo = generateElement("img", "header__logo", header);
+  const menu = generateElement("ul", "header__menu", header);
 
-  header.className = "header";
-  logo.className = "header__logo";
   logo.src = logoImage;
-  menu.classList.add("header__menu", "fs18");
 
   menuItems.forEach((item) => {
-    const menuItem = document.createElement("li");
-    menuItem.className = "header__menu__item";
-    menuItem.textContent = item;
-    menu.appendChild(menuItem);
+    generateElement("li", "header__menu__item", menu, item);
   });
-  header.append(logo);
-  header.append(menu);
-  parent.appendChild(header);
 };
