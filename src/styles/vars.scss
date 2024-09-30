@@ -1,0 +1,50 @@
+$bg-color: #fdfcfc;
+$white-color: #fff;
+$red-color: #d43152;
+$bordo-color: #b01736;
+$grey-color: #d9d9d9;
+$grey-dark-color: #444444;
+
+@font-face {
+  font-family: "Proxima_400";
+  src: url("./../assets/fonts/proxima_regular.otf");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Proxima_600";
+  src: url("./../assets/fonts/proxima_bold.otf");
+  font-weight: 600;
+}
+
+html,
+body {
+  height: 100%;
+  font-family: "Proxima_400", "Roboto", sans-serif;
+}
+body {
+  margin: 0;
+}
+
+.container {
+  width: clamp(290px, 95%, 1250px);
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
+.fs18 {
+  font-size: 18px;
+}
+
+.fs32 {
+  font-size: 32px;
+}
+
+.fs56 {
+  font-size: 56px;
+}
+
+.fs80 {
+  font-size: 80px;
+}
