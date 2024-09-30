@@ -17,4 +17,4 @@
 
 You can see [deploy](https://aleksa013.github.io/Peach-test/dist/index.html).
 
-####It took about 24-26 hours to complete the entire job. Refactoring took about 2 more
+#### It took about 24-26 hours to complete the entire job. Refactoring took about 2 more
