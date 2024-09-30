@@ -20,7 +20,8 @@ export const menuItems = [
 ];
 
 export const bannerContent = {
-  text: "Поставщик услуг цифровой трансформации и&nbsp;кибербезопасности",
+  textOne: "Поставщик услуг цифровой трансформации",
+  textTwo: "и кибербезопасности",
   buttonText: "Наш сайт",
   buttonLinkText: "https://softline.ru",
 };
@@ -108,7 +109,7 @@ export const benefitsContent = {
         icon: medicine,
       },
       {
-        text: "Выходной<br>в день рождения",
+        text: "Выходной в день рождения",
         icon: cake,
       },
       {

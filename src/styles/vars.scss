@@ -67,6 +67,10 @@ body {
   background-color: rgba(215, 215, 215, 0.8);
 }
 
+.white {
+  background-color: $white-color;
+}
+
 .animationLeftUp {
   animation: 0.5s linear arrowUpLeft both;
 }

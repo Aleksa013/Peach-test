@@ -1,27 +1,13 @@
 import "./../styles/numbers.scss";
 import { numberContent } from "../constansts/constants.js";
+import { generateElement } from "../utils/generateElement.js";
 
 export const getNumbers = (parent) => {
-  const numbers = document.createElement("section");
-  numbers.className = "numbers";
+  const numbers = generateElement("section", "numbers", parent);
 
-  numbers.className = "numbers";
   Object.values(numberContent).forEach((number) => {
-    const block = document.createElement("div");
-    const numberSpan = document.createElement("span");
-    const textSpan = document.createElement("span");
-
-    block.classList.add("numbers__item");
-    numberSpan.classList.add("numbers__item__number", "burgundy");
-    textSpan.classList.add("numbers__item__text", "grey-dark");
-
-    numberSpan.innerHTML = number[0];
-    textSpan.textContent = number[1];
-
-    block.append(numberSpan);
-    block.append(textSpan);
-    numbers.append(block);
+    const block = generateElement("div", "numbers__item", numbers);
+    generateElement("span", "numbers__item__number burgundy", block, number[0]);
+    generateElement("span", "numbers__item__text grey-dark", block, number[1]);
   });
-
-  parent.append(numbers);
 };

@@ -29,75 +29,7 @@
           cursor: pointer;
         }
       }
-      .arrow {
-        position: relative;
-        width: 24px;
-        height: 11px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        margin: 3% 1% 0 0;
-        &__part {
-          position: absolute;
-          top: 16%;
-          display: inline-block;
-          background-color: #444444;
-          width: 14px;
-          height: 3px;
-          &:first-of-type {
-            transform: rotate(38deg);
-          }
-          &:last-of-type {
-            right: 0;
-            transform: rotate(-38deg);
-          }
-        }
-      }
     }
-    .open {
-      position: absolute;
-      top: 15%;
-      left: 0;
-      width: 100%;
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
-      justify-content: flex-start;
-      background-color: $white-color;
-      z-index: 3;
-      .button_offices {
-        margin-left: 5%;
-      }
-      .arrow {
-        margin: 1.6% 0 1.5% 1%;
-      }
-      .list_wrappers {
-        margin: 3% 0;
-        width: 100%;
-        height: 11rem;
-        display: flex;
-        justify-content: space-between;
-        padding: 0.6% 5.7% 3%;
-        .list {
-          padding: 0;
-          list-style-type: none;
-          display: flex;
-          flex-direction: column;
-          color: $grey-dark-color;
-          font-size: 19px;
-          line-height: 20px;
-          letter-spacing: 0.8px;
-          gap: 9%;
-          &__region {
-            font-family: "Proxima_600";
-          }
-          &__city {
-            font-family: "Proxima_400";
-          }
-        }
-      }
-    }
-
     &__regions {
       width: clamp(290px, 80%, 736px);
       display: flex;
@@ -133,6 +65,74 @@
   }
 }
 
+.arrow {
+  position: relative;
+  width: 24px;
+  height: 11px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 3% 1% 0 0;
+  &__part {
+    position: absolute;
+    top: 16%;
+    display: inline-block;
+    background-color: #444444;
+    width: 14px;
+    height: 3px;
+    &:first-of-type {
+      transform: rotate(38deg);
+    }
+    &:last-of-type {
+      right: 0;
+      transform: rotate(-38deg);
+    }
+  }
+}
+
+.open {
+  position: absolute;
+  top: 15%;
+  left: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  background-color: $white-color;
+  z-index: 3;
+  .button_offices {
+    margin-left: 5%;
+  }
+  .arrow {
+    margin: 1.6% 0 1.5% 1%;
+  }
+  .list_wrappers {
+    margin: 3% 0;
+    width: 100%;
+    height: 11rem;
+    display: flex;
+    justify-content: space-between;
+    padding: 0.6% 5.7% 3%;
+    .list {
+      padding: 0;
+      list-style-type: none;
+      display: flex;
+      flex-direction: column;
+      color: $grey-dark-color;
+      font-size: 19px;
+      line-height: 20px;
+      letter-spacing: 0.8px;
+      gap: 9%;
+      &__region {
+        font-family: "Proxima_600";
+      }
+      &__city {
+        font-family: "Proxima_400";
+      }
+    }
+  }
+}
 @media screen and (max-width: 800px) {
   .maps {
     padding: 0;

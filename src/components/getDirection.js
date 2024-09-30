@@ -1,36 +1,25 @@
+import "./../styles/maps.scss";
 import "./../styles/directions.scss";
 import { directionContent } from "../constansts/constants.js";
+import { generateElement } from "../utils/generateElement.js";
+import { generateSpans } from "../utils/generateSpans.js";
 
 export const getDirection = (parent) => {
-  const direction = document.createElement("section");
-  const header = document.createElement("h2");
-
-  direction.className = "direction";
-  header.className = "direction__header fs56";
-
-  header.textContent = directionContent.header;
-
-  direction.append(header);
+  const direction = generateElement("section", "direction", parent);
+  generateElement(
+    "h2",
+    "direction__header",
+    direction,
+    directionContent.header
+  );
 
   directionContent.solutions.forEach((value) => {
-    const solution = document.createElement("article");
-    const infoBlock = document.createElement("div");
-    const solutionHeader = document.createElement("h3");
-    const solutionText = document.createElement("p");
-
-    solution.className = "solution";
-    infoBlock.className = "solution__info";
-    solutionHeader.className = "solution__info_header";
-    solutionText.className = "solution__info_text";
-
+    const solution = generateElement("article", "solution", direction);
+    const infoBlock = generateElement("div", "solution__info", solution);
+    generateElement("h3", "solution__info_header", infoBlock, value.solution);
     solution.style.backgroundImage = `url(${value.bgPath})`;
-    solutionHeader.textContent = value.solution;
-    solutionText.textContent = value.description;
-
-    infoBlock.append(solutionHeader);
-    infoBlock.append(solutionText);
-    solution.append(infoBlock);
-    direction.append(solution);
+    const arrowIcon = generateElement("div", "arrow mobile", infoBlock);
+    generateSpans(arrowIcon, "arrow__part white", 2, false);
+    generateElement("p", "solution__info_text", infoBlock, value.description);
   });
-  parent.append(direction);
 };

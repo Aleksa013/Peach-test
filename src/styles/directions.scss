@@ -22,6 +22,7 @@
     flex-direction: column;
     justify-content: flex-end;
     color: $white-color;
+    overflow: hidden;
     &__info {
       position: absolute;
       top: 70%;
@@ -31,6 +32,7 @@
       flex-direction: column;
       justify-content: flex-start;
       background: rgba(45, 54, 83, 0.6);
+      transition: 0.5s;
       &_header {
         font-size: 24px;
         line-height: 24px;
@@ -40,6 +42,9 @@
         font-size: 17px;
         display: none;
       }
+    }
+    .mobile {
+      display: none;
     }
     &:hover {
       .solution__info {
@@ -67,12 +72,16 @@
       margin: 2% auto 1.8%;
       width: 96%;
       height: 3.7rem;
+      transition: 0.5s;
       &__info {
         top: 1%;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-content: space-between;
         &_header {
           font-size: 20px;
           line-height: 19px;
-          margin: 7% 0.5%;
+          margin: 7% 9% 7% 0.5%;
           width: 82%;
           letter-spacing: 0.2px;
         }
@@ -80,11 +89,24 @@
           display: none;
         }
       }
+      .mobile {
+        display: flex;
+        width: 7%;
+        margin: 10% 0 5%;
+        .arrow__part {
+          width: 10px;
+          height: 2px;
+        }
+      }
       &:nth-of-type(5),
       &:last-of-type {
         .solution__info_header {
-          margin: 3% 0.5% 4%;
+          margin: 3% 9% 4% 0.5%;
         }
+      }
+      &:hover {
+        height: 16em;
+        transition: 0.5s;
       }
     }
   }

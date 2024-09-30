@@ -9,6 +9,8 @@
   background-image: url("./../assets/imgs/header-bg.svg");
   background-size: cover;
   &__text {
+    display: flex;
+    flex-direction: column;
     color: $grey-dark-color;
     width: 65%;
     font-family: "Proxima_400";
@@ -16,6 +18,9 @@
     line-height: 56px;
     letter-spacing: 0.85px;
     word-spacing: -1px;
+    &_one {
+      margin-right: -1%;
+    }
   }
   &__button {
     text-decoration: none;

@@ -1,26 +1,11 @@
 import "./../styles/mission.scss";
 import { missionsContent } from "../constansts/constants.js";
+import { generateElement } from "../utils/generateElement.js";
 
 export const getMission = (parent) => {
-  const mission = document.createElement("section");
-  const left = document.createElement("div");
-  const right = document.createElement("div");
-  const header = document.createElement("h2");
-  const text = document.createElement("p");
-
-  mission.className = "mission";
-  left.className = "bg bg_left";
-  right.className = "bg bg_right";
-  header.className = "mission__header";
-  text.className = "mission__text";
-
-  header.textContent = missionsContent.header;
-  text.textContent = missionsContent.text;
-
-  mission.append(left);
-  mission.append(right);
-  mission.append(header);
-  mission.append(text);
-
-  parent.append(mission);
+  const mission = generateElement("section", "mission", parent);
+  generateElement("div", "bg bg_left", mission);
+  generateElement("div", "bg bg_right", mission);
+  generateElement("h2", "mission__header", mission, missionsContent.header);
+  generateElement("p", "mission__text", mission, missionsContent.text);
 };
