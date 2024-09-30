@@ -32,11 +32,11 @@ export const aboutContent = {
 };
 
 export const numberContent = {
-  years: ["> 30 лет", "на IT-рынке"],
+  years: ["30 лет", "на IT-рынке"],
   employers: ["4600", "сотрудников в России"],
   cities: ["25", "городов России"],
-  developers: ["2000+", "разработчиков"],
-  education: ["3000+", "сотрудников ежегодно проходят оценку и обучение"],
+  developers: ["2000", "разработчиков"],
+  education: ["3000", "сотрудников ежегодно проходят оценку и обучение"],
 };
 
 export const mapsContent = {
@@ -109,7 +109,7 @@ export const benefitsContent = {
         icon: medicine,
       },
       {
-        text: "Выходной в день рождения",
+        text: ["Выходной", "в день рождения"],
         icon: cake,
       },
       {
@@ -117,7 +117,7 @@ export const benefitsContent = {
         icon: phone,
       },
       {
-        text: "Корпоративные скидки на спорт",
+        text: ["Корпоративные скидки на спорт"],
         icon: gym,
       },
       {

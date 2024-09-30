@@ -15,18 +15,18 @@
   }
   .solution {
     position: relative;
-    margin-bottom: 2%;
-    width: 49%;
-    height: 16rem;
+    margin-bottom: 1.8%;
+    width: 49.2%;
+    height: 16.2rem;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    color: $white-color;
+    color: #fff;
     overflow: hidden;
     &__info {
       position: absolute;
       top: 70%;
-      padding: 0.5% 3% 0.4%;
+      padding: 0.4% 3.2% 0.4%;
       width: 94%;
       display: flex;
       flex-direction: column;
@@ -36,6 +36,7 @@
       &_header {
         font-size: 24px;
         line-height: 24px;
+        letter-spacing: 0.6px;
         font-family: "Proxima_400";
       }
       &_text {
@@ -46,6 +47,7 @@
     .mobile {
       display: none;
     }
+
     &:hover {
       .solution__info {
         top: 0%;
@@ -64,7 +66,7 @@
     padding: 0;
     gap: 2%;
     &__header {
-      margin: 26% auto 3%;
+      margin: 17% auto 3%;
       font-size: 28px;
       line-height: 28px;
     }

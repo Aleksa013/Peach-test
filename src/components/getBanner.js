@@ -14,4 +14,5 @@ export const getBanner = (parent) => {
     bannerContent.buttonText
   );
   buttonLink.href = bannerContent.buttonLinkText;
+  buttonLink.target = "_blank";
 };

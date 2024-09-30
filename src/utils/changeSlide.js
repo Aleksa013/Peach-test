@@ -1,18 +1,11 @@
-import slide1 from "./../assets/imgs/slide1.png";
-import slide2 from "./../assets/imgs/slide2.png";
-import slide3 from "./../assets/imgs/slide3.png";
-import slide4 from "./../assets/imgs/slide4.png";
-import slide5 from "./../assets/imgs/slide5.png";
-
-const slides = [slide1, slide2, slide3, slide4, slide5];
-
 let count = 0;
 
 export const changeSlide = (direction) => {
-  const slideBlock = document.querySelector(".galery__slider");
+  const sliderView = document.querySelector(".galery__slider_view");
+  const imgs = document.querySelectorAll(".slider__img");
   const paginations = document.querySelectorAll(".pagination");
 
-  if (slideBlock) {
+  if (sliderView) {
     if (direction === "next") {
       count === 4 ? (count = 0) : (count += 1);
     }
@@ -20,8 +13,7 @@ export const changeSlide = (direction) => {
       count === 0 ? (count = 4) : (count -= 1);
     }
 
-    const currentSlide = slides[count];
-    slideBlock.style.backgroundImage = `url(${currentSlide})`;
+    sliderView.style.transform = `translateX(-${(count / imgs.length) * 100}%)`;
 
     paginations.forEach((pagination, index) => {
       index === count
@@ -29,4 +21,19 @@ export const changeSlide = (direction) => {
         : pagination.classList.remove("active");
     });
   }
+};
+
+export const changeSlidePagination = (target) => {
+  const sliderView = document.querySelector(".galery__slider_view");
+  const imgs = document.querySelectorAll(".slider__img");
+  const paginations = document.querySelectorAll(".pagination");
+
+  paginations.forEach((pagination, index) => {
+    pagination.classList.remove("active");
+    if (pagination === target) {
+      count = index;
+      pagination.classList.add("active");
+    }
+  });
+  sliderView.style.transform = `translateX(-${(count / imgs.length) * 100}%)`;
 };

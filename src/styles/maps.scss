@@ -5,7 +5,7 @@
   &__header {
     width: 90%;
     height: 3.8rem;
-    padding: 1.9% 5% 0;
+    padding: 1.7% 5% 0%;
     margin: 0 auto 2%;
     display: flex;
     justify-content: space-between;
@@ -56,11 +56,11 @@
   &__body {
     width: 100%;
     .map {
-      height: 48.4rem;
+      height: 47.9rem;
       background-size: cover;
       background-size: 95.5%;
       background-repeat: no-repeat;
-      background-position: 56% 40%;
+      background-position: 55% 37%;
     }
   }
 }
@@ -141,12 +141,17 @@
       margin: 0 auto;
       display: flex;
       flex-wrap: wrap;
-
       &__offices {
-        width: 65%;
-        font-size: 20px;
-        line-height: 20px;
-        margin: 4% 0 7% -7%;
+        width: 61%;
+        margin: 5% 0 7% -7%;
+        .button_offices {
+          font-size: 20px;
+          line-height: 20px;
+          background-color: transparent;
+          &:hover {
+            cursor: pointer;
+          }
+        }
       }
       &__regions {
         flex-wrap: wrap;
@@ -161,7 +166,7 @@
       overflow-x: auto;
       .map {
         width: 53rem;
-        height: 25.2rem;
+        height: 28.5rem;
         background-size: cover;
       }
     }

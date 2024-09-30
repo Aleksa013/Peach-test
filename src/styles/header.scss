@@ -2,7 +2,7 @@
 
 .header {
   width: 88.5%;
-  padding: 2.1% 5.8% 2.3%;
+  padding: 2.2% 5.8% 2.4% 5.7%;
   display: flex;
   justify-content: space-between;
   border: 1px solid $grey-color;
@@ -16,7 +16,6 @@
     width: clamp(277px, 75%, 688px);
     display: flex;
     gap: 3.2%;
-
     &__item {
       margin-top: 0.4%;
       list-style-type: none;
