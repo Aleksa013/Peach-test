@@ -45,6 +45,10 @@ body {
   color: $grey-dark-color;
 }
 
+.white {
+  background-color: $white-color;
+}
+
 .button {
   width: 4rem;
   height: 4rem;
@@ -67,9 +71,8 @@ body {
   background-color: rgba(215, 215, 215, 0.8);
 }
 
-.white {
-  background-color: $white-color;
-}
+
+
 
 .animationLeftUp {
   animation: 0.5s linear arrowUpLeft both;

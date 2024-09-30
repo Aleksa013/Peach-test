@@ -18,11 +18,22 @@ export const openList = () => {
     button
   );
   Object.values(listCities).forEach((value) => {
-    const list = generateElement("ul", "list", listWrappers);
-    generateElement("li", "list__region", list, value.region);
+    const wrapperButton = generateElement("div", "wrapper", listWrappers);
+    const list = generateElement("ul", "list", wrapperButton );
+    const region = generateElement("li", "list__region", list, value.region);
+    const arrow = generateElement("div", "down", region);
     value.cities.forEach((city) => {
-      generateElement("li", "list__city", list, city);
+      generateElement("li", "list__city hide", list, city);
     });
+    wrapperButton.addEventListener("touchstart", ()=> {
+      const cities = wrapperButton.querySelectorAll(".list__city")
+      cities.forEach((city) => {
+        city.classList.toggle("hide");
+      })
+       arrow.classList.toggle("down");
+        arrow.classList.toggle("up");
+        region.classList.toggle("burgundy")
+    })
   });
 
   arrowParts.forEach((part, index) => {

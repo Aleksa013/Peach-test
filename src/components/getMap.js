@@ -30,7 +30,7 @@ export const getMap = (parent) => {
   map.style.backgroundImage = `url(${allMap})`;
 
   mapsContent.buttons.forEach((button) => {
-    getButton(mapsButtons, "maps__header__regions__button", button, () =>
+    getButton(mapsButtons, "regions__button", button, () =>
       changeMap(mapWrapper, button)
     );
   });
