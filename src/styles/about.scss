@@ -1,0 +1,14 @@
+@import "./vars.scss";
+
+.about {
+  width: 89%;
+  margin: 8% auto;
+  background-color: $white-color;
+  &__text {
+    margin: 9% auto;
+    width: 78%;
+    text-align: center;
+    font-family: "Proxima_600";
+    line-height: 38px;
+  }
+}
